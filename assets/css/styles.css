@@ -152,9 +152,10 @@ button {
 .section__title {
   position: relative;
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-3);
+  margin-bottom: 60px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  align-items: center;
   text-align: center;
 }
 
@@ -396,6 +397,7 @@ button {
 
 .story__description {
   margin-bottom: var(--mb-2-5);
+  text-align: justify;
 }
 
 .story__images {
@@ -537,6 +539,9 @@ button {
   .story__square {
     height: 180px;
   }
+  .story__images {
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 321px) {
@@ -568,6 +573,12 @@ button {
   .story__square {
     height: 180px;
   }
+
+  .story__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* For medium devices */
@@ -583,6 +594,11 @@ button {
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .story__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -656,6 +672,28 @@ button {
   .footer__title {
     font-size: var(--h3-font-size);
   }
+
+  .section__title {
+    position: relative;
+    font-size: var(--h3-font-size);
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section__title::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -697,6 +735,27 @@ button {
   .story__square {
     height: 450px;
   }
+  .section__title {
+    position: relative;
+    font-size: var(--h3-font-size);
+    margin-bottom: 90px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section__title::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
+  }
 }
 
 /* For large devices */
@@ -725,5 +784,27 @@ button {
 
   .scrollup {
     right: 3rem;
+  }
+
+  .section__title {
+    position: relative;
+    font-size: var(--h3-font-size);
+    margin-bottom: 90px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section__title::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 67px;
+    height: 1px;
+    background-color: var(--first-color);
   }
 }
