@@ -73,6 +73,7 @@ sr.reveal(
              .home__description`,
   {
     origin: "left",
+    interval: 100,
   }
 );
 
