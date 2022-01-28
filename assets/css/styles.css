@@ -613,7 +613,7 @@ button {
   }
 
   .nav__logo-icon {
-    height: 53px;
+    height: 55px;
     margin-right: 50px;
   }
 
@@ -663,6 +663,11 @@ button {
     font-size: var(--h2-font-size);
   }
 
+  .nav__logo-icon {
+    height: 57px;
+    margin-right: 50px;
+  }
+
   .home__container {
     column-gap: 2rem;
   }
@@ -699,6 +704,11 @@ button {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .nav__logo-icon {
+    height: 60px;
+    margin-right: 70px;
   }
 
   .story__container {
