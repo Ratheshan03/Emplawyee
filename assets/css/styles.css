@@ -418,43 +418,6 @@ button {
   bottom: -3rem;
 }
 
-/*=============== NEWSLETTER ===============*/
-.newsletter__bg {
-  background-color: var(--first-color);
-  padding: 3rem 1.5rem;
-  text-align: center;
-  row-gap: 2.5rem;
-}
-
-.newsletter__title {
-  font-size: var(--h1-font-size);
-  color: hsl(0, 0%, 15%);
-  margin-bottom: var(--mb-1-5);
-}
-
-.newsletter__description {
-  color: hsl(0, 0%, 21%);
-}
-
-.newsletter__subscribe {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.75rem;
-}
-
-.newsletter__input {
-  border: none;
-  border-radius: 5px 0px 0px 5px;
-  outline: none;
-  background-color: hsl(0, 0%, 94%);
-  padding: 1.25rem 1rem;
-  color: hsl(0, 0%, 15%);
-}
-
-.sub-btn {
-  border-radius: 0px 5px 5px 0px !important;
-}
-
 /*=============== FOOTER ===============*/
 .footer__container {
   row-gap: 2rem;
@@ -550,6 +513,12 @@ button {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+
+  .nav__logo-icon {
+    height: 36px;
+    margin-right: 230px;
+  }
+
   .home__img-bg {
     width: 220px;
   }
@@ -561,20 +530,43 @@ button {
   }
 
   .story__square,
-  .story__img,
-  .testimonial__square,
-  .testimonial__img {
+  .story__img {
     width: 180px;
   }
 
-  .story__square,
-  .testimonial__square {
+  .story__square {
     height: 180px;
   }
+}
 
-  .products__container {
-    grid-template-columns: repeat(1, 180px);
-    justify-content: center;
+@media screen and (min-width: 321px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav__logo-icon {
+    height: 40px;
+    margin-right: 220px;
+  }
+
+  .home__img-bg {
+    width: 270px;
+  }
+  .home__title {
+    font-size: var(--h1-font-size);
+  }
+  .home__button {
+    font-size: var(--smaller-font-size);
+  }
+
+  .story__square,
+  .story__img {
+    width: 180px;
+  }
+
+  .story__square {
+    height: 180px;
   }
 }
 
@@ -584,11 +576,9 @@ button {
     width: 340px;
   }
 
-  .featured__container {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.5rem;
+  .nav__logo-icon {
+    height: 50px;
+    margin-right: 50px;
   }
 
   .footer__container {
@@ -599,11 +589,6 @@ button {
 @media screen and (min-width: 767px) {
   .section {
     padding: 8rem 0 1rem;
-  }
-
-  .cart {
-    width: 420px;
-    box-shadow: -2px 0 4px hsla(0, 0%, 15%, 0.1);
   }
 
   .nav {
@@ -627,6 +612,11 @@ button {
     margin-left: auto;
   }
 
+  .nav__logo-icon {
+    height: 53px;
+    margin-right: 50px;
+  }
+
   .home__container {
     padding-top: 6rem;
     grid-template-columns: 1fr max-content;
@@ -644,16 +634,7 @@ button {
     column-gap: 2rem;
   }
 
-  .featured__title,
-  .featured__price,
-  .new__title,
-  .new__price {
-    font-size: var(--normal-font-size);
-  }
-
-  .story__container,
-  .testimonial__container,
-  .newsletter__bg {
+  .story__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
@@ -666,30 +647,6 @@ button {
   }
   .story__images {
     order: -1;
-  }
-
-  .products__container {
-    grid-template-columns: repeat(3, 200px);
-    justify-content: center;
-    gap: 2.5rem;
-  }
-  .products__card {
-    padding: 2rem 0;
-  }
-  .products__img {
-    height: 155px;
-  }
-
-  .newsletter__bg {
-    text-align: initial;
-    column-gap: 2rem;
-    padding: 4.5rem;
-  }
-  .newsletter__subscribe {
-    flex-direction: row;
-  }
-  .newsletter__input {
-    width: 100%;
   }
 
   .footer__container {
@@ -723,35 +680,17 @@ button {
     padding: 0 0 8rem 6rem;
   }
 
-  .featured__container {
-    grid-template-columns: repeat(3, 312px);
-    padding-top: 2rem;
-  }
-
-  .story__container,
-  .testimonial__container {
+  .story__container {
     column-gap: 8rem;
   }
 
   .story__square,
-  .story__img,
-  .testimonial__square,
-  .testimonial__img {
+  .story__img {
     width: 450px;
   }
 
-  .story__square,
-  .testimonial__square {
+  .story__square {
     height: 450px;
-  }
-
-  .products__container,
-  .new__container {
-    padding-top: 2rem;
-  }
-
-  .testimonial__container {
-    padding-bottom: 4rem;
   }
 }
 
@@ -762,8 +701,7 @@ button {
     margin-right: auto;
   }
 
-  .story__container,
-  .testimonial__container {
+  .story__container {
     column-gap: 13rem;
   }
 
@@ -773,11 +711,6 @@ button {
   .story__img {
     left: 5rem;
     top: -5rem;
-  }
-
-  .testimonial__img {
-    right: 5rem;
-    top: 5rem;
   }
 
   .scrollup {
