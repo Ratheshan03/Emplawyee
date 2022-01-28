@@ -38,59 +38,6 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*=============== TESTIMONIAL SWIPER ===============*/
-let testimonialSwiper = new Swiper(".testimonial-swiper", {
-  spaceBetween: 30,
-  loop: "true",
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-/*=============== NEW SWIPER ===============*/
-let newSwiper = new Swiper(".new-swiper", {
-  spaceBetween: 24,
-  loop: "true",
-
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  },
-});
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll("section[id]");
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
-    }
-  });
-}
-window.addEventListener("scroll", scrollActive);
-
 /*=============== SHOW SCROLL UP ===============*/
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
@@ -100,23 +47,41 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
-/*=============== SHOW CART ===============*/
-const cart = document.getElementById("cart"),
-  cartShop = document.getElementById("cart-shop"),
-  cartClose = document.getElementById("cart-close");
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 2800,
+  // reset: true,
+});
 
-/*===== CART SHOW =====*/
-/* Validate if constant exists */
-if (cartShop) {
-  cartShop.addEventListener("click", () => {
-    cart.classList.add("show-cart");
-  });
-}
+sr.reveal(
+  `.section__title,
+  .story__description,
+  .newsletter,
+  .footer__content`,
+  {
+    origin: "top",
+    interval: 100,
+  }
+);
 
-/*===== CART HIDDEN =====*/
-/* Validate if constant exists */
-if (cartClose) {
-  cartClose.addEventListener("click", () => {
-    cart.classList.remove("show-cart");
-  });
-}
+sr.reveal(
+  `.home__price, 
+             .home__title,
+             .discover-btn,
+             .footer__copy,
+             .home__description`,
+  {
+    origin: "left",
+  }
+);
+
+sr.reveal(
+  `.home__img, 
+   .download-btn,
+    .story__images`,
+  {
+    origin: "right",
+    interval: 100,
+  }
+);

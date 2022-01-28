@@ -7,8 +7,8 @@
 
   /*========== Colors ==========*/
   --first-color: hsl(229, 83%, 72%);
-  --button-color: hsl(0, 0%, 24%);
-  --button-color-alt: hsl(0, 0%, 28%);
+  --button-color: hsl(0, 0%, 21%);
+  --button-color-alt: hsl(0, 0%, 44%);
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 75%);
   --text-color-light: hsl(0, 0%, 55%);
@@ -333,7 +333,7 @@ button {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
   color: var(--first-color);
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-1);
 }
 
 .home__btns {
@@ -342,7 +342,7 @@ button {
 }
 
 .home__button {
-  box-shadow: 0 12px 24px hsla(0, 0%, 10%, 0.2);
+  margin-right: 10px;
 }
 
 /*=============== BUTTONS ===============*/
@@ -350,13 +350,15 @@ button {
   display: inline-block;
   background-color: var(--button-color);
   color: #fff;
-  padding: 1.25rem 2rem;
+  padding: 1.15rem 1.75rem;
   font-weight: var(--font-medium);
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .button:hover {
   background-color: var(--button-color-alt);
+  box-shadow: 0 12px 20px hsla(200, 90%, 88%, 0.171);
 }
 
 .button--gray {
@@ -421,7 +423,7 @@ button {
 }
 
 .newsletter__description {
-  color: hsl(0, 0%, 35%);
+  color: hsl(0, 0%, 21%);
 }
 
 .newsletter__subscribe {
@@ -432,10 +434,15 @@ button {
 
 .newsletter__input {
   border: none;
+  border-radius: 5px 0px 0px 5px;
   outline: none;
   background-color: hsl(0, 0%, 94%);
   padding: 1.25rem 1rem;
   color: hsl(0, 0%, 15%);
+}
+
+.sub-btn {
+  border-radius: 0px 5px 5px 0px !important;
 }
 
 /*=============== FOOTER ===============*/
