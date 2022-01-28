@@ -285,6 +285,7 @@ button {
 
 .home__img {
   width: 240px;
+  box-shadow: 0 12px 20px hsla(200, 100%, 15%, 0.479);
 }
 
 .home__img-bg {
@@ -310,12 +311,12 @@ button {
 
 .home__social-link {
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--first-color);
   transition: 0.3s;
 }
 
 .home__social-link:hover {
-  color: var(--title-color);
+  color: rgba(63, 78, 126, 0.925);
 }
 
 .home__title {
