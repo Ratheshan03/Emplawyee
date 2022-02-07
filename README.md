@@ -1,2 +1,2 @@
 ### EBOOK Launching Site for Project "Emp-Law-Yee" 
-- for RACIIT. 
+- Presented by RACIIT. 
